@@ -5,10 +5,10 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { SidenavSublinkItemComponent } from '../sidenav/sidenav-sublink-item/sidenav-sublink-item.component';
-import { SidenavItemComponent } from '../sidenav/sidenav-item/sidenav-item.component';
-import { SidenavComponent } from '../sidenav/sidenav.component';
-import { ReactiveSidenavModule } from '../sidenav/sidenav.module';
+import { SidenavSublinkItemComponent } from '../sidenav/src/sidenav-sublink-item/sidenav-sublink-item.component';
+import { SidenavItemComponent } from '../sidenav/src/sidenav-item/sidenav-item.component';
+import { SidenavComponent } from '../sidenav/src/sidenav.component';
+import { ReactiveSidenavModule } from '../sidenav/src/sidenav.module';
 import { MatCardModule, MatSidenavModule, MatToolbarModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
