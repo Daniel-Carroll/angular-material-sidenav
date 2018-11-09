@@ -1,0 +1,24 @@
+<div [ngClass]="{ 'active-nav': nav.module == activeModule }" >
+<mat-list-item (disableRipple)="true" role="listitem" (click)="_navigateToPath(nav)" class="sidenav-list-item" >
+  <span style="padding-left:0px">
+    <a matLine >
+        <mat-icon matListIcon class="sidenav-list-icon" [ngClass]="{ 'active-text': nav.module == activeModule }" >{{nav.icon}}</mat-icon>
+        <span class="sidenav-text" [ngClass]="{ 'active-text': nav.module == activeModule }"  *ngIf="isExpanded" style="margin-right:150px;position:relative;bottom:5px;right;left:5px;">{{nav.label}}</span>
+    </a>
+    <span fxFlex></span>
+    <mat-icon *ngIf="isExpanded && nav.subnav"
+    [@indicatorRotate]="getExpandedState()" 
+    (click)="_toggleSubnavExpansion(nav)" 
+    class="sidenav-text" [ngClass]="{ 'active-text': nav.module == activeModule }" mat-icon-button>keyboard_arrow_right</mat-icon>
+  </span>
+</mat-list-item>
+  <div [@bodyExpansion]="getExpandedState()">
+    <sidenav-sublink-item *ngIf="isExpanded" 
+    [parentModule]="nav.module"
+    [activeModule]="activeModule" 
+    [subnavLinks]="nav.subnav" 
+    [expanded]="expanded"
+    (activePathChanges)="_navigateToPath(nav)">
+    </sidenav-sublink-item>
+  </div>
+</div>

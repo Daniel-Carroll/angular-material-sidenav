@@ -1,0 +1,30 @@
+@import '../app-theme.scss';
+
+html, body{
+  font-family: Roboto;
+  margin:0px;
+}
+
+
+mat-sidenav-container{
+    height:100vh;
+}
+
+.toolbar-icon:hover{
+  cursor:pointer;
+}
+
+.example-header-image {
+  background-image: url('https://avatars2.githubusercontent.com/u/16789314?v=4');
+  background-size: cover;
+}
+
+.example-card{
+  
+}
+
+mat-card{
+  border-bottom: 1px solid #e0e0e0;
+  border-radius:0;
+  box-shadow: 0 0px 0px 0px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 0px 0 rgba(0,0,0,.12) !important;
+}

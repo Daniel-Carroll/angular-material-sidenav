@@ -1,0 +1,121 @@
+@import '~@angular/material/theming';
+
+// Creates a container object for a light theme to be given to individual component theme mixins.
+@function reactive-sidenav-theme($primary, $isDark) {
+  @if($isDark){
+      @return (
+      primary: $primary,
+      icon: $primary,
+      background: $primary,
+      active: darken(mat-color($primary), 13%),
+      hover: darken(mat-color($primary), 20%),
+      is-dark: $isDark
+  );
+  }@else{
+      @return (
+      primary: $primary,
+      icon: darken(mat-color(mat-palette($mat-grey, 600)), 1%),
+      background: white,
+      active: lighten(mat-color(mat-palette($mat-grey, 700)), 55%),
+      active-text: mat-color($primary),
+      hover: lighten(mat-color(mat-palette($mat-grey, 700)), 40%),
+      is-dark: $isDark
+  );
+  }
+
+}
+
+@mixin sidenav-theme($theme){
+  $primary: map-get($theme, primary );
+  $background: map-get($theme, background );
+  $hover: map-get($theme, hover);
+  $active: map-get($theme, active);
+  $active-text:map-get($theme, active-text);
+  $is-dark:map-get($theme, is-dark);
+  $icon:map-get($theme, icon);
+
+  .sidenav-background{
+    height: 100vh;
+    overflow: hidden;
+    @if($is-dark){
+      background-color: mat-color($background);
+    }@else{
+      background-color: white;
+      border-color: rgba(0,0,0,.12);
+      border-right-width: 0.5px;
+      border-right-style: solid;
+    }
+  }
+
+  .sidenav-text{
+    @if($is-dark){
+      color:white !important;
+    }@else{
+      color:black;
+    }
+  }
+
+  .sidenav-list-item{
+    height: 48px;
+  }
+
+  .sidenav-list-icon{
+    @if($is-dark){
+      color:white;
+    }@else{
+      color: mat-color($primary);
+    }
+    position:relative;
+    top:1px;
+    margin-right:10px;
+  }
+
+  .sidenav-list-item:hover{
+    cursor: pointer;
+    background-color: $hover;
+  }
+
+  .subnav{
+    font-size: 14px;
+    margin-left: 50px;
+  }
+
+  .active-nav{
+    background-color: $active;
+    
+  }
+
+  .active-text{
+    color: $active-text !important;
+  }
+
+  .menu-icon{
+    padding:4px;
+    @if($is-dark){
+      color:white;
+    }@else{
+      color:mat-color($primary);
+    }
+  }
+
+  .menu-icon:hover{
+    cursor: pointer;
+  }
+  
+  .menu-button{
+    position:relative;
+    right:3px;
+    @if($is-dark){
+      background-color: mat-color($primary);
+    }@else{
+      background-color: white;
+    }
+  }
+
+
+  
+  
+}
+
+
+

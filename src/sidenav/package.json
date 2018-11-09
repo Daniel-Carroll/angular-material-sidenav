@@ -1,0 +1,21 @@
+{
+  "name": "angular-material-sidenav",
+  "version": "1.0.0",
+  "description": "a stylized and responsive sidenav for angular material",
+  "main": "public_api.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sidenav",
+    "material",
+    "angular"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^7.0.0",
+    "@angular/core": "^7.0.0",
+    "@angular/material": "^7.0.3"
+  },
+  "author": "Daniel-Carroll",
+  "license": "MIT"
+}

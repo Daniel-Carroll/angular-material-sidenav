@@ -1,0 +1,30 @@
+@import '~@angular/material/theming';
+@import './sidenav/src/sidenav-theme.scss';
+
+// Define the default theme (same as the example above).
+$app-primary: mat-palette($mat-blue, 700);
+$app-accent: mat-palette($mat-teal, 500);
+$app-warn: mat-palette($mat-red, 400);
+
+$mat-black: (
+  A700: #000000,
+  contrast: (
+    50: $dark-primary-text
+  )
+);
+
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+
+// Include the default theme styles.
+@include angular-material-theme($app-theme);
+
+/**
+* Theme for sidenav
+*/
+$sidenav-primary-color: mat-palette($mat-orange, 700);
+$is-dark-theme:  false;
+$theme: reactive-sidenav-theme($app-primary, $is-dark-theme);
+
+@include sidenav-theme($theme);

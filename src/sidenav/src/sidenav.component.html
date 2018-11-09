@@ -1,0 +1,9 @@
+<ng-content *ngIf="isExpanded"></ng-content>
+<mat-list (disableRipple)="true" class="sidenav-background" style="padding-top:0px;">
+  <mat-list-item *ngIf="!handsetMode" (disableRipple)="true"  style="padding-top:4px;padding-bottom:4px;">
+          <mat-icon class="menu-icon"  (click)="_toggleSidenavExpansion()">menu</mat-icon>
+  </mat-list-item>
+  <div *ngFor="let nav of routingTree">
+    <sidenav-item (activePathChange)="updateActivePath(nav)" [activeModule]="activeModule" [nav]="nav" [isExpanded]="isExpanded"></sidenav-item>
+  </div>
+</mat-list>

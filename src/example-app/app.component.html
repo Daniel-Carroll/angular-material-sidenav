@@ -1,0 +1,25 @@
+<mat-sidenav-container class="sidenav-container" autosize>
+  <!--SIDENAV LIST-->
+  <!--SIDENAV LIST-->
+  <mat-sidenav  #sidenav [mode]="sidenavMode" opened="true" class="sidenav-background">
+    <sidenav [routingTree]="routingTree">
+<!--       <mat-card class="example-card" style="padding-bottom:0;">
+  <mat-card-header>
+    <div mat-card-avatar src="https://avatars2.githubusercontent.com/u/16789314?v=4" class="example-header-image"></div>
+    <mat-card-title>Daniel Carroll</mat-card-title>
+    <mat-card-subtitle>danielcarroll95@gmail.com</mat-card-subtitle>
+  </mat-card-header>
+</mat-card> -->
+    </sidenav>
+  </mat-sidenav>
+
+  <!--APP CONTENT-->
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <mat-icon class="toolbar-icon" (click)="toggle()">arrow_forward_ios</mat-icon> 
+      <span>My App</span>
+    </mat-toolbar>
+ 
+    <mat-card>Enter Content Here</mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>
