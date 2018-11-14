@@ -1,8 +1,8 @@
 {
   "name": "angular-material-sidenav",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "a stylized and responsive sidenav for angular material",
-  "main": "public_api.ts",
+  "main": "src/public_api.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
