@@ -111,11 +111,11 @@ export const SIDENAV_MODE_PUSH = "push";
   styleUrls: [ './app.component.scss' ]
 })
 export class AppComponent  {
-	//ViewChild decorator to access sidenav from component
+  // ViewChild decorator to access sidenav from component
   @ViewChild('sidenav') public matSideNav: MatSidenav;
   // sidenavMode string used to control the mode of sidenav
   sidenavMode: string;
-// routingTree will be used to build out navigation links on the sidenav
+  // routingTree will be used to build out navigation links on the sidenav
   routingTree = SidenavRoutingTree.navLinks;
 
   constructor(private sidenavService: SidenavService){
@@ -123,18 +123,18 @@ export class AppComponent  {
   }
 
   ngOnInit(){
-  	// set the sidenav, service can be used appwide to control sidenav
+    // set the sidenav, service can be used appwide to control sidenav
     this.sidenavService.setSidenav(this.matSideNav);
 
     // subscribe to mode changes
     this.sidenavService.getSidenavMode().subscribe( sidenavMode => {
       this.sidenavMode = sidenavMode;
     })
-    // Set set sidenav mode behaviors based on breakpoint, optional.
+    // Set sidenav mode behaviors based on breakpoint, optional.
     this.sidenavService.observeBreakpointsForSidenavMode(SIDENAV_MODE_OVER, SIDENAV_MODE_SIDE)
   }
 
-	// use the sidenav toggle method to completely hide sidenav if you desire
+  // use the sidenav toggle method to completely hide sidenav if you desire
   toggle(){
     this.sidenavService.toggle();
   }
