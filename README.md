@@ -32,7 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 })
 ```
 
-Step 2: configure the navigation tree.
+Step 2: configure the navigation tree. This is a typescript file that is custom to your project, just set it up 
+with the structure below and import it into your app component to pass down to the sidenav as an input.
 
 label is the label that will be displayed on the subnav to the user
 
