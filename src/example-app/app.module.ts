@@ -8,7 +8,7 @@ import { HelloComponent } from './hello.component';
 import { SidenavSublinkItemComponent } from '../sidenav/src/sidenav-sublink-item/sidenav-sublink-item.component';
 import { SidenavItemComponent } from '../sidenav/src/sidenav-item/sidenav-item.component';
 import { SidenavComponent } from '../sidenav/src/sidenav.component';
-import { ReactiveSidenavModule } from '../sidenav/src/sidenav.module';
+import { ResponsiveSidenavModule } from '../sidenav/src/sidenav.module';
 import { MatCardModule, MatSidenavModule, MatToolbarModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
@@ -19,8 +19,8 @@ import { APP_BASE_HREF } from '@angular/common';
    BrowserModule, 
    BrowserAnimationsModule, 
    FormsModule, 
-   MatButtonModule, MatCardModule, MatToolbarModule, MatIconModule, ReactiveSidenavModule, MatSidenavModule ],
-  exports: [ReactiveSidenavModule],
+   MatButtonModule, MatCardModule, MatToolbarModule, MatIconModule, ResponsiveSidenavModule, MatSidenavModule ],
+  exports: [ResponsiveSidenavModule],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ],
   providers: [{provide: APP_BASE_HREF, useValue: '/'}]

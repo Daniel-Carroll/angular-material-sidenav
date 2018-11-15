@@ -67,12 +67,17 @@
     }
     position:relative;
     top:1px;
-    margin-right:10px;
+    margin-right:5px;
+  }
+
+  .mat-list .mat-list-item .mat-list-item-content{
+    padding: 0px 16px !important;
   }
 
   .sidenav-list-item:hover{
     cursor: pointer;
     background-color: $hover;
+    padding: 0px;
   }
 
   .subnav{
@@ -112,7 +117,9 @@
     }
   }
 
-
+  .mat-list .mat-list-item .mat-list-item-content{
+    padding:0px;
+  }
   
   
 }

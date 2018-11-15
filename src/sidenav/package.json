@@ -1,14 +1,21 @@
 {
-  "name": "angular-material-sidenav",
-  "version": "1.0.0",
+  "name": "responsive-angular-sidenav",
+  "version": "0.0.3",
   "description": "a stylized and responsive sidenav for angular material",
-  "main": "public_api.ts",
+  "main": "src/public_api.ts",
+  "ngPackage": {
+    "$schema": "../../node_modules/ng-packagr/package.schema.json",
+    "dest": "../../dist/responsive-angular-sidenav",
+    "lib": {
+      "entryFile": "src/public_api.ts"
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Daniel-Carroll/angular-material-sidenav"
+    "type": "git",
+    "url": "https://github.com/Daniel-Carroll/angular-material-sidenav"
   },
   "keywords": [
     "sidenav",

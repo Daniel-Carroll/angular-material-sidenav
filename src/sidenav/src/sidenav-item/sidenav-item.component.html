@@ -1,9 +1,9 @@
 <div [ngClass]="{ 'active-nav': nav.module == activeModule }" >
 <mat-list-item (disableRipple)="true" role="listitem" (click)="_navigateToPath(nav)" class="sidenav-list-item" >
-  <span style="padding-left:0px">
-    <a matLine >
+  <span>
+    <a matLine>
         <mat-icon matListIcon class="sidenav-list-icon" [ngClass]="{ 'active-text': nav.module == activeModule }" >{{nav.icon}}</mat-icon>
-        <span class="sidenav-text" [ngClass]="{ 'active-text': nav.module == activeModule }"  *ngIf="isExpanded" style="margin-right:150px;position:relative;bottom:5px;right;left:5px;">{{nav.label}}</span>
+        <span class="sidenav-text" [ngClass]="{ 'active-text': nav.module == activeModule }"  *ngIf="isExpanded" style="margin-right:150px;position:relative;bottom:5px;left:5px;">{{nav.label}}</span>
     </a>
     <span fxFlex></span>
     <mat-icon *ngIf="isExpanded && nav.subnav"
