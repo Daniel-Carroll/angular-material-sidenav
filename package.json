@@ -23,7 +23,15 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "copy-license": "copy .\\LICENSE .\\dist\\responsive-angular-sidenav",
+    "copy-readme": "copy README.md .\\dist\\responsive-angular-sidenav",
+    "copy-files": "npm run copy-license && npm run copy-readme",
+    "build:lib": "ng-packagr -p src/sidenav/package.json",
+    "build:app": "ng build",
+    "build:scss": "scss-bundle -c ./scss-bundle.config.json",
+    "pack": "cd dist/responsive-angular-sidenav && npm pack",
+    "package": "npm run build:lib && npm run build:scss && npm run pack"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.5",
@@ -44,6 +52,9 @@
     "protractor": "~5.4.1",
     "ts-node": "~7.0.1",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.6"
+    "typescript": "~3.1.6",
+    "ng-packagr": "^4.2.0",
+    "tsickle": ">=0.29.0",
+    "scss-bundle": "~2.4.0"
   }
 }

@@ -11,4 +11,4 @@ import { MatIconModule, MatListModule, MatAccordion, MatButtonModule } from "@an
     declarations: [SidenavComponent, SidenavSublinkItemComponent, SidenavItemComponent],
     providers: [MatAccordion]
 })
-export class ReactiveSidenavModule {}
+export class ResponsiveSidenavModule {}

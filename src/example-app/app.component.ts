@@ -17,8 +17,6 @@ export class AppComponent  {
   sidenavMode: string;
 
   routingTree = SidenavRoutingTree.navLinks;
-  
-  name = 'Angular';
 
   constructor(private sidenavService: SidenavService){
 

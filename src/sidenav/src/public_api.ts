@@ -2,4 +2,5 @@
  * Public API for material sidenav
  */
 
-export * from './src/sidenav.module';
+export * from './sidenav.module';
+export * from './sidenav.service';

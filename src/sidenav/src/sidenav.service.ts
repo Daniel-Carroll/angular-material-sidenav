@@ -23,11 +23,9 @@ export class SidenavService {
   /**
    * Setter for sidenav.
    *
-   * @param {MatSidenav} sidenav
+   * @param MatSidenav sidenav
    */
   public setSidenav(sidenav: MatSidenav) {
-    
-    console.log(sidenav)
     this.sidenav = sidenav;
   }
 
@@ -53,7 +51,7 @@ export class SidenavService {
    * Will return sidenav mode observable 
    * that will emit values on change
    * 
-   * @returns {Observable<string>} 
+   * @returns Observable<string>
    */
   public getSidenavMode(): Observable<string> {
     return this.sidenavModeSubject.asObservable();
@@ -68,8 +66,8 @@ export class SidenavService {
    * when breakpoint changes between mobile and desktop
    * breakpoints. 
    * 
-   * @param {"side" | "over" | "push"} smallScreenMode 
-   * @param {"side" | "over" | "push"} largeScreenMode
+   * @param "side" | "over" | "push" smallScreenMode 
+   * @param "side" | "over" | "push" largeScreenMode
    */
   public observeBreakpointsForSidenavMode(mobileMode: "side" | "over" | "push",
                                           desktopMode: "side" | "over" | "push"){
@@ -90,9 +88,9 @@ export class SidenavService {
   /**
    * Toggle this sidenav. This is equivalent to calling open() when it's already opened, or close() when it's closed.
    *
-   * @param {boolean} isOpen  Whether the sidenav should be open.
+   * @param boolean isOpen  Whether the sidenav should be open.
    *
-   * @returns {Promise<MatSidenavToggleResult>}
+   * @returns Promise<MatSidenavToggleResult>
    */
   public toggle(isOpen?: boolean): Promise<MatDrawerToggleResult> {
     return this.sidenav.toggle(isOpen);

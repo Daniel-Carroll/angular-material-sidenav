@@ -1,7 +1,6 @@
 <div>
   <mat-list-item class="sidenav-list-item"
-  *ngFor="let subnav of subnavLinks" (click)="_navigateToPath(subnav)" routerLink="subnav.path" 
-    [ngClass]="{'active-subnav': activePath == subnav.path}">
+  *ngFor="let subnav of subnavLinks" (click)="_navigateToPath(subnav)" routerLink="subnav.path">
     <a *ngIf="expanded" class="sidenav-text subnav" [ngClass]="{'active-text': parentModule == activeModule}">{{subnav.label}}</a> 
   </mat-list-item>
 </div>

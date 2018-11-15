@@ -1,0 +1,4 @@
+{
+    "entry": "src/sidenav/src/sidenav-theme.scss",
+    "dest": "dist/responsive-angular-sidenav/_theme.scss"
+}
