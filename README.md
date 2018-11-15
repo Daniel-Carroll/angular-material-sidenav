@@ -4,6 +4,13 @@
 Just a nice little sidenav that has a couple of nice functionalities baked in. I use it on a few
 projects so i figured i would upload it to npm
 
+
+## Installation
+install to project
+```
+npm install responsive-angular-sidenav --save
+```
+
 ## How to set up
 
 Step 1:
