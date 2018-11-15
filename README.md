@@ -88,9 +88,9 @@ update app.component to initialize sidenav service
 
 add tag for sidenav component, this will be wrapped by the Angular Material <mat-sidenav></mat-sidenav> component
 ```html
-	<mat-sidenav  #sidenav [mode]="sidenavMode" opened="true" class="sidenav-		background">
+<mat-sidenav  #sidenav [mode]="sidenavMode" opened="true" class="sidenav-background">
     	<sidenav [routingTree]="routingTree"></sidenav>
-  </mat-sidenav>
+</mat-sidenav>
 ```
 
 Configure the sidenav in app.component.ts
