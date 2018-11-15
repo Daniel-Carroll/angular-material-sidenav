@@ -6,7 +6,6 @@ projects so i figured i would upload it to npm
 
 
 ## Installation
-install to project
 ```
 npm install responsive-angular-sidenav --save
 ```
