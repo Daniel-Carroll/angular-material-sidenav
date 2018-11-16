@@ -35,17 +35,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 Step 2: configure the navigation tree. This is a typescript file that is custom to your project, just set it up 
 with the structure below and import it into your app component to pass down to the sidenav as an input.
 
-label is the label that will be displayed on the subnav to the user
+**label** is the label that will be displayed on the subnav to the user
 
-icon leverages the Google Material Icons at https://material.io/tools/icons/?style=baseline
+**icon** leverages the Google Material Icons at https://material.io/tools/icons/?style=baseline
 
-path is the attribute that will be used for routerLink navigation.
+**path** is the attribute that will be used for routerLink navigation.
 
-module refers to the top level navigation that the optional sublinks belong to.
+**module** refers to the top level navigation that the optional sublinks belong to.
 
-subnavExpanded is the boolean that will be toggled when user clicks on subnav arrow
+**subnavExpanded** is the boolean that will be toggled when user clicks on subnav arrow
 
-subnavs follow same structure as top level navs. icons on subnavs are optional.
+**subnavs** follow same structure as top level navs. icons on subnavs are optional.
 
 ```Typescript
 export class SidenavRoutingTree{
