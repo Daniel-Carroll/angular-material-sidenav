@@ -171,3 +171,48 @@ $theme: reactive-sidenav-theme($app-primary, $is-dark-theme);
 
 @include sidenav-theme($theme);
 ```
+
+## Sidenav Service API
+
+**setSidenav(sidenav: MatSidenav)**
+
+Method that is used to set your sidenav. Allows you to access the sidenav through the service
+across the entire application.
+
+**open(): Promise<MatDrawerToggleResult>**
+	
+Opens the sidenav drawer
+
+**close(): Promise<MatDrawerToggleResult>**
+	
+Closes the sidenav drawer
+
+**getSidenavMode(): Observable<string>**
+	
+Returns an observable that will emit sidenav mode changes to subscribers
+
+**setSidenavMode(sidenavMode: "side" | "push" | "over")**
+
+Allows you to set sidenav mode to either side, push, or over. Will emit value upon change.
+
+**observeBreakpointsForSidenavMode(mobileMode: "side" | "push" | "over", desktopMode: "side" | "push" | "over")**
+
+This method will use the breakpoint observer to trigger sidenavMode updates. When application hits 
+Breakpoints.HandsetPortrait or Breakpoints.TabletPortrait it will update sidenav mode to value passed
+through in **mobileMode**. If the viewport does not match these Breakpoints it will set sidenavMode to 
+the value passed in through **desktopMode**. 
+
+I generally find that "over" works well for mobile and desktop is just a matter of preference between "side" and "push"
+
+**toggle(isOpen?: boolean): Promise<MatDrawerToggleResult>**
+	
+Will toggle the sidenav between open and closed.
+
+**getSidenavStatus(): boolean**
+
+Will return a boolean. If sidenav is opened it will return true, else false.
+
+**getSidenavStatusAsString(): string**
+
+Will return sidenav status as string. If sidenav is opened it will return 'opened',
+else it will return 'closed'. Useful for animations.
